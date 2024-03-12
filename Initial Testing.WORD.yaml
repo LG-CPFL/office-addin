@@ -1,0 +1,99 @@
+name: Initial Testing
+description: Basically a blank canvas.
+host: WORD
+api_set: {}
+script:
+  content: |-
+    // check that office is ready
+    Office.onReady( () => {
+      // check that the document is loaded
+      $(document).ready( () => {
+        // when button is clicked
+        $("#run").on("click", function () {
+          Word.run(main) // run main function
+          .catch(log => console.error(log)) // unless it breaks
+        });
+      });
+    });
+
+    // script goes here
+    async function main(wrc: Word.RequestContext) {
+      const document = wrc.document;
+
+      // this function handles loading+syncing context data
+      async function load(stuff) {
+        stuff.load();
+        await wrc.sync();
+      }
+
+      type collection = {
+        property: string;
+        method(): void;
+      }
+
+      class objects implements collection {
+        property: string;
+        constructor(demo:string) {
+          this.property = demo;
+        }
+        method(): void {
+          console.log("the method is void");
+        }
+      }
+
+      const test = new objects("")
+
+
+
+
+      const paras = document.body.paragraphs;
+      await load(paras);
+
+      for (let p of paras.items) {
+        p.insertText(".","End");
+      }
+
+      document.body.insertParagraph("please be patient","End");
+
+      await load(paras)
+
+      if (paras.items.length <= 10) {
+        console.log(paras.items.length);
+      } else {
+        console.log("start again");
+        document.body.insertText("ok, so","Replace");
+        wrc.sync();
+      }
+    }
+  language: typescript
+template:
+  content: |-
+    <button id="run" class="ms-Button">
+        <span class="ms-Button-label">Run!</span>
+    </button>
+  language: html
+style:
+  content: |-
+    section.samples {
+        margin-top: 20px;
+    }
+
+    section.samples .ms-Button, section.setup .ms-Button {
+        display: block;
+        margin-bottom: 5px;
+        margin-left: 20px;
+        min-width: 80px;
+    }
+  language: css
+libraries: |
+  https://appsforoffice.microsoft.com/lib/1/hosted/office.js
+  @types/office-js
+
+  office-ui-fabric-js@1.4.0/dist/css/fabric.min.css
+  office-ui-fabric-js@1.4.0/dist/css/fabric.components.min.css
+
+  core-js@2.4.1/client/core.min.js
+  @types/core-js
+
+  jquery@3.1.1
+  @types/jquery@3.3.1
