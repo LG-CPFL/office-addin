@@ -1,4 +1,3 @@
-<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
 <!DOCTYPE html>
 <html>
 
@@ -13,24 +12,6 @@
 
 </body>
 
-<script>
-    Office.onReady((info) => {
-        // Check that we loaded into Word
-        if (info.host === Office.HostType.Word) {
-            document.getElementById("helloButton").onclick = sayHello;
-        }
-    });
-
-    function sayHello() {
-        return Word.run((context) => {
-
-            // insert a paragraph at the start of the document.
-            const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.start);
-            
-            // sync the context to run the previous API call, and return.
-            return context.sync();
-        });
-    }
-</script>
+<script src="https://github.com/LG-CPFL/hub/taskpane.js"></script>
 
 </html>
