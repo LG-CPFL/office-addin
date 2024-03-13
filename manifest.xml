@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:type="TaskPaneApp">
+           xsi:type="TaskPaneApp"> 
+  <!-- these are required sections-->
   <Id>F3E9A0E2-00F9-4DC3-A535-3A988F3A2AE6</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>CPFL</ProviderName>
   <DefaultLocale>en-AU</DefaultLocale>
-  <DefaultSettings>
-    <SourceLocation DefaultValue="https://raw.githubusercontent.com/LG-CPFL/office-addin/main/src/taskpane.html"/>
-  </DefaultSettings>
-  <DisplayName DefaultValue="CPFL Add-in"/>
-  <Description DefaultValue="A simple Word add-in for CPFL."/>
+  <DisplayName DefaultValue="CPFL"/>
+  <Description DefaultValue="A simple Taskpane add-in for CPFL."/>
 
-  <IconUrl DefaultValue="https://example.com/icon.png"/>
-  <SupportUrl DefaultValue="https://example.com/support"/>
+  <!-- these bits are optional-->
+  <IconUrl DefaultValue="https://raw.githubusercontent.com/LG-CPFL/office-addin/main/assets/icon-32.png"/>
+  <SupportUrl DefaultValue="https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins"/>
   <AppDomains>
-    <AppDomain>https://example.com</AppDomain>
+    <AppDomain>https://raw.githubusercontent.com/LG-CPFL/office-addin/main</AppDomain>
   </AppDomains>
-
   <Hosts>
     <Host Name="Document"/>
   </Hosts>
 
-  
-
+  <!-- these parts are required-->
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://raw.githubusercontent.com/LG-CPFL/office-addin/main/src/taskpane.html"/>
+  </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
+
+  <!-- WIP
+  - 
+  -->
+  
 </OfficeApp>

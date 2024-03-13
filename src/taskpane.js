@@ -1,17 +1,20 @@
-Office.onReady((info) => {
-    // Check that we loaded into Word
-    if (info.host === Office.HostType.Word) {
-        document.getElementById("helloButton").onclick = sayHello;
-    }
-});
-
-function sayHello() {
-    return Word.run((context) => {
-
-        // insert a paragraph at the start of the document.
-        const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.start);
-        
-        // sync the context to run the previous API call, and return.
-        return context.sync();
+// check that office is ready
+Office.onReady( () => {
+    // check that the document is loaded
+    $(document).ready( () => {
+        // when button is clicked
+        $("#runButton").on("click", function () {
+            Word.run(main) // run main function
+            .catch(log => console.error(log)) // unless it breaks
+        });
     });
+});
+  
+// script goes here
+async function main(context) {
+    const document = context.document;
+
+    document.body.insertParagraph("Hello World", "End")
+    await context.sync();
+
 }
