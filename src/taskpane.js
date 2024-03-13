@@ -17,18 +17,4 @@ async function main(context) {
     document.body.insertParagraph("Hello World", "End")
     await context.sync();
 
-    console.log("output successful.")
-
 }
-
-// console output to HTML (from GPT)
-(function() {
-    var oldConsoleLog = console.log;
-    console.log = function(message) {
-        var consoleOutputDiv = document.getElementById('consoleOutput');
-        if (consoleOutputDiv) {
-            consoleOutputDiv.innerHTML += message + '<br>';
-        }
-        oldConsoleLog.apply(console, arguments);
-    }
-})();
