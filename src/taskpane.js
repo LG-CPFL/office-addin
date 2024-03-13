@@ -14,7 +14,7 @@ Office.onReady( () => {
 async function main(context) {
     const document = context.document;
 
-    document.body.insertParagraph("Hello World", "End")
+    document.body.insertParagraph("Hello World!", "End")
     await context.sync();
 
 }
