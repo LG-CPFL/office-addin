@@ -3,6 +3,10 @@ a company office add-in.
 for what purpose?
 currently unsure.
 ## wip
-THIS THING DOES NOT WORK BECAUSE IT IS TRYING TO ACCESS PRIVATELY STORED SHIT YOU IDIOT
+- add to office as addin (will only do anything online i think?)
+    - go to admin centre
+    - settings > integrated apps > deployed apps > upload custom app
+    - app type: office add-in
+    - point to manifest xml
 - test a lot
 - add css file?
