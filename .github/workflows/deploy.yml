@@ -41,7 +41,7 @@ jobs:
             -v ${{ github.workspace }}:/workspace \
             -w /workspace \
             node:14 \
-            sh -c "npm install && npx tsc"
+            sh -c "npm install typescript && npx tsc"
 
   # then deploy to pages
   deploy:
