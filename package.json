@@ -1,0 +1,11 @@
+{
+    "name": "taskpane",
+    "version": "1.0.0.1",
+    "description": "CPFL Office Add-In",
+    "scripts": {
+      "build": "tsc"
+    },
+    "devDependencies": {
+      "typescript": "^4.5.4"
+    }
+  }
