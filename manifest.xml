@@ -22,7 +22,7 @@
 
   <!-- these parts are required-->
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://lg-cpfl.github.io/office-addin/src/taskpane.html"/>
+    <SourceLocation DefaultValue="https://lg-cpfl.github.io/office-addin/dist/taskpane.html"/>
   </DefaultSettings>
   <Permissions>ReadWriteDocument</Permissions>
 
