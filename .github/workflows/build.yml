@@ -21,7 +21,7 @@ jobs:
           git config user.email "lg@clarkpanagakos.com.au"
         
       - name: Create new branch
-        run: git checkout -b auto-branch
+        run: git checkout -b -f auto-branch
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -33,12 +33,6 @@ jobs:
         run: |
           git add .
           git commit -m "re-built repo"
-          git push --set-upstream origin auto-branch
-
-      - name: Create pull request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          title: Re-Built Repo
-          body: The repository has been rebuilt using the workflow action to reinstall the dependencies
-          branch: auto-branch
+          git remote -v
+          git push -a
       
