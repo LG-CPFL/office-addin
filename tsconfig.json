@@ -9,7 +9,7 @@
         "office-js"
       ],
       "paths": {
-        "office.js": ["./node_modules/office-js/dist/office.js"]
+        "office.js": ["./node_modules/@microsoft/office-js/dist/office.js"]
       }
     },
     "include": [

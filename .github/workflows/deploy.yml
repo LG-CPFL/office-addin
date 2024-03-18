@@ -40,6 +40,7 @@ jobs:
         run: |
           ls -la
           ls -la node_modules
+          ls -la node_modules/@microsoft
 
       - name: Compile script
         run: npm run compile
