@@ -4,6 +4,7 @@
       "module": "ESnext",
       "outDir": "dist",
       "strict": true,
+      "baseUrl": ".",
       "moduleResolution": "node",
       "types": [
         "office-js"
