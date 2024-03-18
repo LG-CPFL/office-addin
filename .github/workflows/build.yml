@@ -10,6 +10,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Git config
+        run: |
+          git config user.name "LG-CPFL"
+          git config user.email "lg@clarkpanagakos.com.au"
         
       - name: Create new branch
         run: git checkout -b auto-branch
