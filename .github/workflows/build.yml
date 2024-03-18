@@ -15,7 +15,7 @@ jobs:
         run: git checkout -b auto-branch
 
       - name: Set up Node.js
-        uses: action/setup-node@v4
+        uses: actions/setup-node@v4
 
       - name: Install dependencies
         run: npm install
@@ -27,7 +27,7 @@ jobs:
           git push --set-upstream origin auto-branch
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v6
         with:
           title: Re-Built Repo
           body: The repository has been rebuilt using the workflow action to reinstall the dependencies
