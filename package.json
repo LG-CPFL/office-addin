@@ -4,12 +4,5 @@
     "description": "CPFL Office Taskpane Add-In",
     "scripts": {
       "compile": "tsc"
-    },
-    "dependencies": {
-      "typescript": "*",
-      "@microsoft/office-js": "*"
-    },
-    "devDependencies": {
-      "@types/office-js": "*"
     }
   }

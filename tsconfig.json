@@ -4,13 +4,7 @@
       "module": "ESNext",
       "outDir": "dist",
       "strict": true,
-      "moduleResolution": "node",
-      "types": [
-        "office-js"
-      ],
-      "paths": {
-        "office.js": ["./node_modules/@microsoft/office-js/dist/office.js"]
-      }
+      "moduleResolution": "node"
     },
     "include": [
       "src/**/*.ts"
