@@ -23,7 +23,7 @@ Office.onReady( () => {
 async function main(context:Word.RequestContext) {
     const content = context.document.body;
 
-    if (textField === "") {
+    if (textField.value === "") {
         content.insertParagraph("Who goes there?", "End")
     } else {
         content.insertParagraph("Hello " + textField.value, "End")
