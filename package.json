@@ -6,8 +6,7 @@
       "compile": "tsc"
     },
     "dependencies": {
-      "@microsoft/office-js": "*",
-      "@microsoft/office-js-word": "*",
-      "typescript": "*"
+      "typescript": "*",
+      "@microsoft/office-js": "*"
     }
   }

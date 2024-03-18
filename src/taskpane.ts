@@ -1,6 +1,5 @@
 // import dependencies
 import * as Office from 'office.js';
-import * as Word from 'office.js/word';
 
 // define taskpane html and elements
 const html = document;

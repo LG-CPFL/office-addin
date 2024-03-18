@@ -5,8 +5,7 @@
       "outDir": "dist",
       "strict": true,
       "types": [
-        "office-js", 
-        "office-js-word"
+        "office-js"
       ]
     },
     "include": [
