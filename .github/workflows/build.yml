@@ -33,6 +33,5 @@ jobs:
         run: |
           git add .
           git commit -m "re-built repo"
-          git remote -v
-          git push -a
+          git push -v
       
