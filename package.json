@@ -1,11 +1,13 @@
 {
-    "name": "taskpane",
-    "version": "1.0.0.1",
-    "description": "CPFL Office Add-In",
+    "name": "cpfl-office",
+    "version": "1.0.0",
+    "description": "CPFL Office Taskpane Add-In",
     "scripts": {
-      "build": "tsc"
+      "compile": "tsc"
     },
-    "devDependencies": {
-      "typescript": "^4.5.4"
+    "dependencies": {
+      "@microsoft/office-js": "*",
+      "@microsoft/office-js/word": "*",
+      "typescript": "*"
     }
   }

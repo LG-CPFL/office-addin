@@ -33,11 +33,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
 
-      - name: Install TypeScript
-        run: npm install typescript
+      - name: Install dependencies
+        run: npm install
 
-      - name: Run Typescript Compiler
-        run: tsc
+      - name: Compile script
+        run: npm run compile
 
   # then deploy to pages
   deploy:
