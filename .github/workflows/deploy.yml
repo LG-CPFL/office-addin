@@ -36,26 +36,35 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Compile script
-        run: npm run compile
+      #- name: Compile script
+      #  run: npm run compile
 
   # then deploy to pages
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+  #deploy:
+  #  needs: build
+  #  environment:
+  #    name: github-pages
+  #    url: ${{ steps.deployment.outputs.page_url }}
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - name: Setup Pages
+  #      uses: actions/configure-pages@v4
         
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
+  #    - name: Upload artifact
+  #      uses: actions/upload-pages-artifact@v3
+  #      with:
+  #        # Upload entire repository
+  #        path: '.'
           
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  #    - name: Deploy to GitHub Pages
+  #      id: deployment
+  #      uses: actions/deploy-pages@v4
+
+
+      - name: check back in
+        run: |
+         git config --local user.email "actions@github.com"
+         git config --local user.name "GitHub Actions"
+         git add .
+         git commit -m "Commit changes made by GitHub Actions"
+         git push
