@@ -36,6 +36,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug
+        run: |
+          ls -la
+          ls -la node_modules
+
       - name: Compile script
         run: npm run compile
 
