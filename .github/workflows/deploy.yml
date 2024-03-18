@@ -36,13 +36,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Debug
-        run: |
-          ls -la
-          ls -la node_modules
-          ls -la node_modules/@types
-          ls -la node_modules/@types/office-js
-
       - name: Compile script
         run: npm run compile
 
