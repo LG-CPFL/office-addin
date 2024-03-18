@@ -7,7 +7,7 @@
     },
     "dependencies": {
       "@microsoft/office-js": "*",
-      "@microsoft/office-js/word": "*",
+      "@microsoft/office-js-word": "*",
       "typescript": "*"
     }
   }

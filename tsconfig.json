@@ -6,7 +6,7 @@
       "strict": true,
       "types": [
         "office-js", 
-        "office-js/word"
+        "office-js-word"
       ]
     },
     "include": [
