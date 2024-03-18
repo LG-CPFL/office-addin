@@ -1,5 +1,7 @@
-// import dependencies
-import * as Office from 'office.js';
+/* import dependencies
+/// <reference types="office-js" />
+import * as Office from 'office.js'; 
+*/
 
 // define taskpane html and elements
 const html = document;

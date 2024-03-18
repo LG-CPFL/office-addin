@@ -1,8 +1,15 @@
 {
-    "name": "cpfl-office",
-    "version": "1.0.0",
-    "description": "CPFL Office Taskpane Add-In",
-    "scripts": {
-      "compile": "tsc"
-    }
+  "name": "cpfl-office",
+  "version": "1.0.0",
+  "description": "CPFL Office Taskpane Add-In",
+  "scripts": {
+    "compile": "tsc"
+  },
+  "dependencies": {
+    "@microsoft/office-js": "*"
+  },
+  "devDependencies": {
+    "typescript": "*",
+    "@types/office-js": "*"
   }
+}

@@ -34,14 +34,10 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install dependencies
-        run: |
-          npm install typescript --save-dev
-          npm install office-js --save
-          npm install @types/office-js --save-dev
+        run: run install
 
       - name: Compile script
-      #  run: npm run compile
-        run: npm clean
+        run: npm run compile
 
   # then deploy to pages
   deploy:
