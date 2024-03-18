@@ -11,7 +11,7 @@
   <Description DefaultValue="A simple Taskpane add-in for CPFL."/>
 
   <!-- these bits are optional-->
-  <IconUrl DefaultValue="https://raw.githubusercontent.com/LG-CPFL/office-addin/main/assets/icon-32.png"/>
+  <IconUrl DefaultValue="https://raw.githubusercontent.com/LG-CPFL/office-addin/main/dist/assets/icon-32.png"/>
   <SupportUrl DefaultValue="https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins"/>
   <AppDomains>
     <AppDomain>https://raw.githubusercontent.com/LG-CPFL/office-addin/main</AppDomain>

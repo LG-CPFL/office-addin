@@ -3,15 +3,15 @@ name: Compile and Deploy Pages
 
 on:
   # Runs on pushes targeting the default branch
-  # push:
-  #  branches: ["main"]
+  push:
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Sets permissions of the GITHUB_TOKEN
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -36,35 +36,26 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      #- name: Compile script
-      #  run: npm run compile
+      - name: Compile script
+        run: npm run compile
 
   # then deploy to pages
-  #deploy:
-  #  needs: build
-  #  environment:
-  #    name: github-pages
-  #    url: ${{ steps.deployment.outputs.page_url }}
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - name: Setup Pages
-  #      uses: actions/configure-pages@v4
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
         
-  #    - name: Upload artifact
-  #      uses: actions/upload-pages-artifact@v3
-  #      with:
-  #        # Upload entire repository
-  #        path: '.'
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload just the distributed repository
+          path: './dist'
           
-  #    - name: Deploy to GitHub Pages
-  #      id: deployment
-  #      uses: actions/deploy-pages@v4
-
-
-      - name: check back in
-        run: |
-         git config --local user.email "lg@clarkpanagakos.com.au"
-         git config --local user.name "LG-CPFL"
-         git add .
-         git commit -m "Commit changes made by GitHub Actions"
-         git push
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
