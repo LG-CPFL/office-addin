@@ -41,6 +41,8 @@ jobs:
           ls -la
           ls -la node_modules
           ls -la node_modules/@microsoft
+          ls -la node_modules/@microsoft/office-js
+          ls -la node_modules/@microsoft/office-js/dist
 
       - name: Compile script
         run: npm run compile
