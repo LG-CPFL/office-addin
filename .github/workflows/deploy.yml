@@ -63,8 +63,8 @@ jobs:
 
       - name: check back in
         run: |
-         git config --local user.email "actions@github.com"
-         git config --local user.name "GitHub Actions"
+         git config --local user.email "lg@clarkpanagakos.com.au"
+         git config --local user.name "LG-CPFL"
          git add .
          git commit -m "Commit changes made by GitHub Actions"
          git push
