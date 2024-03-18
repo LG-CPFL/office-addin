@@ -33,5 +33,5 @@ jobs:
         run: |
           git add .
           git commit -m "re-built repo"
-          git push -v
+          git push -u origin auto-branch
       
