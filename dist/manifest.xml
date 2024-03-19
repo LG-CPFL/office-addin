@@ -4,7 +4,7 @@
            xsi:type="TaskPaneApp"> 
   <!-- these are required sections-->
   <Id>F3E9A0E2-00F9-4DC3-A535-3A988F3A2AE6</Id>
-  <Version>1.0.0.1</Version>
+  <Version>1.0.0.2</Version>
   <ProviderName>CPFL</ProviderName>
   <DefaultLocale>en-AU</DefaultLocale>
   <DisplayName DefaultValue="CPFL"/>
