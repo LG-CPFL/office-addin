@@ -1,8 +1,3 @@
-/* import dependencies - not sure any of this is necessary
-/// <reference types="office-js" />
-import * as Office from 'office.js'; 
-*/
-
 // global declarations
 const html = document;
 const runButton = html.getElementById("runButton") as HTMLButtonElement;
@@ -12,14 +7,15 @@ const textField = html.getElementById("textField") as HTMLInputElement;
 Office.onReady( () => {
     // check that the html has loaded
     html.addEventListener("DOMContentLoaded", () => {
+        // when the button is clicked
         runButton.addEventListener("click", () => {
-            Word.run(main) // run main function
-            .catch((log:Error) => console.error(log)) // unless it breaks
+            Word.run(main) // run the main function
+            .catch((errorMessage:Error) => console.error(errorMessage)) // unless it breaks
         });
     });
 });
   
-// run button function goes here
+// test function
 async function main(context:Word.RequestContext) {
     const content = context.document.body;
 
