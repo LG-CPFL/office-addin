@@ -53,8 +53,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload just the distributed repository
-          path: '.'
+          # Upload just the root index + distributed directory
+          path: |
+            'index.html'
+            './dist'
           
       - name: Deploy to GitHub Pages
         id: deployment

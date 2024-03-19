@@ -14,7 +14,7 @@ Office.onReady( () => {
     html.addEventListener("DOMContentLoaded", () => {
         runButton.addEventListener("click", () => {
             Word.run(main) // run main function
-            .catch(log => console.error(log)) // unless it breaks
+            .catch((log:Error) => console.error(log)) // unless it breaks
         });
     });
 });
