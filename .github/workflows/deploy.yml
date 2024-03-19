@@ -63,7 +63,7 @@ jobs:
       - name: Get static files
         run: tar \
           --dereference --hard-dereference \
-          cf github-pages.tar \
+          -cf github-pages.tar \
           index.html dist
 
       - name: Upload artifact
