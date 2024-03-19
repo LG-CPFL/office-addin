@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "CPFL Office Taskpane Add-In",
   "scripts": {
-    "compile": "tsc"
+    "compile": "tsc && git add . && git commit -m 'compiled typescript' && git push"
   },
   "dependencies": {
     "@microsoft/office-js": "*"

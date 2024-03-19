@@ -47,7 +47,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Pages
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pages
         uses: actions/configure-pages@v4
 
       - name: Upload index
@@ -73,5 +76,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-      # might need to add checkout to the deploy step, or perhaps a conditional checking back in to make sure the tsc compiling is not in vain
