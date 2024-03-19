@@ -27,10 +27,10 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node
+        uses: actions/setup-node@v4
 
       - name: Install dependencies
         run: npm install
@@ -55,20 +55,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout
+        uses: actions/checkout@v4
 
       - name: Setup pages
-        uses: actions/configure-pages
+        uses: actions/configure-pages@v4
 
       - name: Get static files
         run: tar --dereference --hard-dereference -czf github-pages.tar.gz index.html dist
 
       - name: Upload artifact
-        uses: actions/upload-artifact
+        uses: actions/upload-artifact@v4
         with:
-            name: github-pages
-            path: github-pages.tar.gz
+          name: github-pages
+          path: github-pages.tar.gz
           
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages
+        uses: actions/deploy-pages@v4
