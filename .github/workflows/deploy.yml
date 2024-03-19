@@ -56,7 +56,7 @@ jobs:
           # Upload just the root index + distributed directory
           path: |
             'index.html'
-            './dist'
+            'dist/'
           
       - name: Deploy to GitHub Pages
         id: deployment
