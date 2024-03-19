@@ -60,26 +60,14 @@ jobs:
       - name: Setup pages
         uses: actions/configure-pages@v4
 
-      - name: Upload index
-        uses: actions/upload-artifact@v4
-        with: 
-          name: index-artifact
-          path: 'index.html'
-          overwrite: true
+      - name: Get static files
+        run: tar cf github-pages.tar index.html dist
 
-      - name: Upload dist
+      - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: dist-artifact
-          path: 'dist/'
-          overwrite: true
-
-      - name: Merge artifacts
-        uses: actions/upload-artifact/merge@v4
-        with:
-          name: github-pages
-          delete-merged: true
-          separate-directories: true
+            name: github-pages
+            path: github-pages.tar
           
       - name: Deploy to GitHub Pages
         id: deployment
