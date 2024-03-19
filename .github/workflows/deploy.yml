@@ -79,6 +79,7 @@ jobs:
         with:
           name: github-pages
           delete-merged: true
+          separate-directories: true
           
       - name: Deploy to GitHub Pages
         id: deployment
