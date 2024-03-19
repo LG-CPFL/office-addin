@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages, modified to enable tsc compiling
-name: Compile and Deploy Pages
+name: Compile and Deploy
 
 on:
   # Runs on pushes targeting the default branch
@@ -35,6 +34,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Set up git instance
+        run: |
+          git config user.name "LG-CPFL"
+          git config user.email "lg@clarkpanagakos.com.au"
 
       - name: Compile script
         run: npm run compile
