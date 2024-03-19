@@ -60,14 +60,10 @@ jobs:
       - name: Setup pages
         uses: actions/configure-pages@v4
 
-      - name: Get static files
-        run: tar --dereference --hard-dereference -czf github-pages.tar.gz index.html dist
-
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: github-pages.tar.gz
+          path: index.html dist
           
       - name: Deploy to GitHub Pages
         id: deployment
