@@ -9,7 +9,7 @@ Office.onReady( () => {
     html.addEventListener("DOMContentLoaded", () => {
         // when the button is clicked
         runButton.addEventListener("click", () => {
-            Word.run(main) // run the main function
+            await Word.run(main) // run the main function
             .catch((errorMessage:Error) => console.error(errorMessage)) // unless it breaks
         });
     });
