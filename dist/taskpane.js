@@ -1,8 +1,4 @@
 "use strict";
-/* import dependencies - not sure any of this is necessary
-/// <reference types="office-js" />
-import * as Office from 'office.js';
-*/
 // global declarations
 const html = document;
 const runButton = html.getElementById("runButton");
@@ -11,13 +7,14 @@ const textField = html.getElementById("textField");
 Office.onReady(() => {
     // check that the html has loaded
     html.addEventListener("DOMContentLoaded", () => {
+        // when the button is clicked
         runButton.addEventListener("click", () => {
-            Word.run(main) // run main function
-                .catch((log) => console.error(log)); // unless it breaks
+            Word.run(main) // run the main function
+                .catch((errorMessage) => console.error(errorMessage)); // unless it breaks
         });
     });
 });
-// run button function goes here
+// test function
 async function main(context) {
     const content = context.document.body;
     if (textField.value === "") {
