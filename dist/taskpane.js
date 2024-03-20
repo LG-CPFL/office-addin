@@ -3,7 +3,6 @@
 const html = document;
 const runButton = html.getElementById("runButton");
 const textField = html.getElementById("textField");
-// check that office is ready
 Office.onReady(() => {
     // check that the html has loaded
     html.addEventListener("DOMContentLoaded", () => {
@@ -14,7 +13,7 @@ Office.onReady(() => {
         });
     });
 });
-// test function
+// runButton function
 async function main(context) {
     const content = context.document.body;
     if (textField.value === "") {
