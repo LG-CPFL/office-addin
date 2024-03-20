@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:type="TaskPaneApp"> 
@@ -11,10 +11,11 @@
   <Description DefaultValue="A simple Taskpane add-in for CPFL."/>
 
   <!-- these bits are optional-->
-  <IconUrl DefaultValue="https://raw.githubusercontent.com/LG-CPFL/office-addin/main/assets/icon-32.png"/>
+  <IconUrl DefaultValue="https://raw.githubusercontent.com/LG-CPFL/office-addin/main/dist/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://raw.githubusercontent.com/LG-CPFL/office-addin/main/dist/assets/icon-128.png"/>
   <SupportUrl DefaultValue="https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins"/>
   <AppDomains>
-    <AppDomain>https://raw.githubusercontent.com/LG-CPFL/office-addin/main</AppDomain>
+    <AppDomain>https://raw.githubusercontent.com/LG-CPFL/office-addin/main/dist</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Document"/>
