@@ -1,4 +1,4 @@
-name: Compile and Deploy
+name: Deploy to Github Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -21,34 +21,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # compile typescript first
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Set up git instance
-        run: |
-          git config user.name "LG-CPFL"
-          git config user.email "lg@clarkpanagakos.com.au"
-
-      - name: Enable compiler
-        run: chmod +x compiler.sh
-
-      - name: Compile script
-        run: npm run compile
-
-  # then deploy to pages
   deploy:
-    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -63,6 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # Uploads only the dist directory
           path: dist
           
       - name: Deploy to GitHub Pages
