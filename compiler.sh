@@ -13,7 +13,7 @@ if tsc; then
         exit 0
     fi
 else
-    # If TypeScript compilation fails, print error details
+    # If TypeScript compilation fails, print error
     echo "compilation failed"
     exit 1
 fi
