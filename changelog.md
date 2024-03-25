@@ -1,0 +1,2 @@
+# the commitments
+1. Went back to compiling on deployment as work system cannot run scripts, merged manifest with office add-in example from MS, reconfigured assets accordingly, and redid typescript to be asynchronous and modular. 

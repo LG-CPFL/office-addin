@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "CPFL Office Taskpane Add-In",
   "scripts": {
-    "compile": "tsc"
+    "compile": "./compiler.sh"
   },
   "dependencies": {
     "@microsoft/office-js": "*"
   },
   "devDependencies": {
-    "typescript": "*",
-    "@types/office-js": "*"
+    "@types/office-js": "*",
+    "typescript": "*"
   }
 }
