@@ -11,7 +11,7 @@
   <DisplayName DefaultValue="CPFL Office"/>
   <Description DefaultValue="An add-in for Clark Panagakos Family Law."/>
   <IconUrl DefaultValue="https://lg-cpfl.github.io/office-addin/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://lg-cpfl.github.io/office-addin/assets/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://lg-cpfl.github.io/office-addin/assets/icon-80.png"/>
   <SupportUrl DefaultValue="https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins"/>
   <AppDomains>
     <AppDomain>https://lg-cpfl.github.io/office-addin</AppDomain>

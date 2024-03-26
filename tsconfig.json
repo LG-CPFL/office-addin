@@ -1,12 +1,24 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "ESNext",
-      "outDir": "dist",
-      "strict": true,
-      "moduleResolution": "node"
-    },
-    "include": [
-      "src/**/*.ts"
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "noEmitOnError": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es5",
+    "lib": [
+      "es2015",
+      "dom"
     ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "ts-node": {
+    "files": true
   }
+}

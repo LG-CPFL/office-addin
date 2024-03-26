@@ -1,12 +1,24 @@
 {
   "name": "cpfl-office",
-  "version": "1.0.0",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LG-CPFL/office-addin.git"
+  },
+  "license": "MIT",
   "description": "CPFL Office Add-In",
   "dependencies": {
-    "@microsoft/office-js": "*"
+    "@microsoft/office-js": "*",
+    "core-js": "*",
+    "jquery": "*"
   },
   "devDependencies": {
+    "@types/core-js": "*",
+    "@types/jquery": "*",
+    "@types/node": "*",
     "@types/office-js": "*",
+    "@types/office-runtime": "*",
+    "ts-node": "*",
     "typescript": "*"
   }
 }
