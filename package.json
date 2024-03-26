@@ -1,10 +1,7 @@
 {
   "name": "cpfl-office",
   "version": "1.0.0",
-  "description": "CPFL Office Taskpane Add-In",
-  "scripts": {
-    "compile": "./compiler.sh"
-  },
+  "description": "CPFL Office Add-In",
   "dependencies": {
     "@microsoft/office-js": "*"
   },

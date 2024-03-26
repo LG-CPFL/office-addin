@@ -4,15 +4,11 @@ const html = document;
 const runButton = html.getElementById("runButton");
 const textField = html.getElementById("textField");
 // initialise application
-async () => {
-    await Office.onReady(info => {
-        if (info.host === Office.HostType.Word) {
-            html.addEventListener("DOMContentLoaded", () => {
-                attempt(main);
-            });
-        }
+Office.onReady().then(() => {
+    html.addEventListener("DOMContentLoaded", () => {
+        attempt(main);
     });
-};
+});
 // error handling
 async function attempt(fn) {
     try {
