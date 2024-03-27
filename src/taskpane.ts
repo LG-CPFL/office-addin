@@ -1,12 +1,14 @@
 // initialise application
 Office.onReady((info) => {
-    $(document).on("ready", () => {
-        if (info.host === Office.HostType.Word) {
+    if (info.host === Office.HostType.Word) {
+        document.getElementById("sideload-msg").style.display = "none";
+        document.getElementById("app-body").style.display = "flex";
+        $(document).on("ready",() => {
             attempt(events)
-        } else {
-            console.error("Host invalid.")
-        }
-    })
+        })
+    } else {
+        console.error("Host invalid")
+    }
 })
 
 // error handling
@@ -22,21 +24,16 @@ async function attempt(fn:Function) {
 // event triggers
 async function events() {
     // click the run button
-    $("#runButton").on("click", async () => {
-        await Word.run(main)
+    $("#run-button").on("click", async () => {
+        return Word.run((wrc) => main(wrc))
     })
 }
 
 // execute script
 async function main(context:Word.RequestContext) {
     const content = context.document.body;
-    let input = $("#textField").val().toString().trim();
 
-    if (input === "") {
-        content.insertParagraph("Who goes there?", "End")
-    } else {
-        content.insertParagraph("Hello " + input, "End")
-    }
-
+    content.insertParagraph("Hello There", "End")
+    
     await context.sync();
 }

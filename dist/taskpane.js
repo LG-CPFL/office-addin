@@ -36,14 +36,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 // initialise application
 Office.onReady(function (info) {
-    $(document).on("ready", function () {
-        if (info.host === Office.HostType.Word) {
+    if (info.host === Office.HostType.Word) {
+        document.getElementById("sideload-msg").style.display = "none";
+        document.getElementById("app-body").style.display = "flex";
+        $(document).on("ready", function () {
             attempt(events);
-        }
-        else {
-            console.error("Host invalid.");
-        }
-    });
+        });
+    }
+    else {
+        console.error("Host invalid");
+    }
 });
 // error handling
 function attempt(fn) {
@@ -72,14 +74,9 @@ function events() {
         var _this = this;
         return __generator(this, function (_a) {
             // click the run button
-            $("#runButton").on("click", function () { return __awaiter(_this, void 0, void 0, function () {
+            $("#run-button").on("click", function () { return __awaiter(_this, void 0, void 0, function () {
                 return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0: return [4 /*yield*/, Word.run(main)];
-                        case 1:
-                            _a.sent();
-                            return [2 /*return*/];
-                    }
+                    return [2 /*return*/, Word.run(function (wrc) { return main(wrc); })];
                 });
             }); });
             return [2 /*return*/];
@@ -89,18 +86,12 @@ function events() {
 // execute script
 function main(context) {
     return __awaiter(this, void 0, void 0, function () {
-        var content, input;
+        var content;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     content = context.document.body;
-                    input = $("#textField").val().toString().trim();
-                    if (input === "") {
-                        content.insertParagraph("Who goes there?", "End");
-                    }
-                    else {
-                        content.insertParagraph("Hello " + input, "End");
-                    }
+                    content.insertParagraph("Hello There", "End");
                     return [4 /*yield*/, context.sync()];
                 case 1:
                     _a.sent();
