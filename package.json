@@ -8,7 +8,6 @@
   "license": "MIT",
   "description": "CPFL Office Add-In",
   "dependencies": {
-    "@microsoft/office-js": "*",
     "core-js": "*"
   },
   "devDependencies": {

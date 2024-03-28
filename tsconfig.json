@@ -17,9 +17,6 @@
       //language and environment
       "target": "ES6",
       "jsx": "react",
-      "lib": [
-        "DOM"
-      ],
 
       //completeness
       "skipLibCheck": true
