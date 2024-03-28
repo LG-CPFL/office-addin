@@ -7,6 +7,9 @@
   },
   "license": "MIT",
   "description": "CPFL Office Add-In",
+  "scripts": {
+    "start": "office-addin-debugging start dist/manifest.xml --no-debug"
+  },
   "dependencies": {
     "core-js": "*"
   },
@@ -14,6 +17,10 @@
     "@types/core-js": "*",
     "@types/node": "*",
     "@types/office-js": "*",
+    "office-addin-cli": "*",
+    "office-addin-debugging": "*",
+    "office-addin-dev-certs": "*",
+    "office-addin-manifest": "*",
     "typescript": "*"
   }
 }
