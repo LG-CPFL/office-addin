@@ -1,24 +1,33 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "baseUrl": ".",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "jsx": "react",
-    "noEmitOnError": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    "target": "es5",
-    "lib": [
-      "es2015",
-      "dom"
-    ]
-  },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "ts-node": {
-    "files": true
+    "compilerOptions": {
+      //type checking
+      "strict": true,
+
+      //modules
+      "module": "Node16",
+      "moduleResolution": "Node16",
+
+      //emit
+      "noEmitOnError": true,
+      "outDir": "./dist",
+
+      //interop constraints
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+
+      //language and environment
+      "target": "ES2022",
+      "jsx": "react",
+      "lib": [
+        "ES2023",
+        "DOM"
+      ],
+
+      //completeness
+      "skipLibCheck": true
+  
+    },
+
+    "include": ["src/**/*"]
+
   }
-}

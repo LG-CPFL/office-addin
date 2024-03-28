@@ -9,18 +9,12 @@
   "description": "CPFL Office Add-In",
   "dependencies": {
     "@microsoft/office-js": "*",
-    "core-js": "*",
-    "jquery": "*"
+    "core-js": "*"
   },
   "devDependencies": {
     "@types/core-js": "*",
-    "@types/jquery": "*",
     "@types/node": "*",
     "@types/office-js": "*",
-    "@types/office-runtime": "*",
-    "office-addin-cli": "^1.5.9",
-    "office-addin-manifest": "^1.12.11",
-    "ts-node": "*",
     "typescript": "*"
   }
 }

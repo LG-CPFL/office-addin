@@ -1,20 +1,26 @@
 // initialise application
 Office.onReady((info) => {
     if (info.host === Office.HostType.Word) {
-        document.getElementById("sideload-msg").style.display = "none";
-        document.getElementById("app-body").style.display = "flex";
-        $(document).on("ready",() => {
-            attempt(events)
-        })
+        const sideloadMsg = document.getElementById("sideload-msg");
+        const appBody = document.getElementById("app-body");
+        if (sideloadMsg && appBody) {
+            sideloadMsg.style.display = "none";
+            appBody.style.display = "flex";
+            document.addEventListener("DOMContentLoaded",() => {
+                attempt(events)
+            })
+        } else {
+            console.error("Elements missing")
+        }
     } else {
         console.error("Host invalid")
     }
 })
 
 // error handling
-async function attempt(fn:Function) {
+function attempt(fn:Function) {
     try {
-        await fn();
+        fn();
     }
     catch (lg) {
         console.error(lg);
@@ -22,10 +28,10 @@ async function attempt(fn:Function) {
 }
 
 // event triggers
-async function events() {
+function events() {
     // click the run button
-    $("#run-button").on("click", async () => {
-        return Word.run((wrc) => main(wrc))
+    document.addEventListener("click", () => {
+        Word.run((wrc) => main(wrc))
     })
 }
 
