@@ -2,17 +2,5 @@
 node_modules/
 .vscode/
 
-# Ignore system and editor files
-.DS_Store
-*.swp
-*.log
-
 # Ignore dependency lock files
 package-lock.json
-yarn.lock
-
-# Ignore environment-specific files
-.env
-
-# Ignore WIP
-wip.md
